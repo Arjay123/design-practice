@@ -1,0 +1,35 @@
+body {
+    background-color: #62929E;
+}
+
+.modal {
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    width: 80%;
+    -moz-box-shadow:    10px 10px 20px -2px #393D3F;
+    -webkit-box-shadow: 10px 10px 20px -2px #393D3F;
+    box-shadow:         10px 10px 20px -2px #393D3F;
+}
+
+
+@media (min-width: 576px) {
+    .modal {
+        width: 60%;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .modal {
+        width: 40%;
+    }
+}
+
+
+@media (min-width: 992px) {
+
+}
