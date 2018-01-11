@@ -1,5 +1,8 @@
 body {
     background-color: #62929E;
+    font-size: 15px;
+    color: #393D3F;
+    font-family: 'Roboto', sans-serif;
 }
 
 .modal {
@@ -13,7 +16,81 @@ body {
     -moz-box-shadow:    10px 10px 20px -2px #393D3F;
     -webkit-box-shadow: 10px 10px 20px -2px #393D3F;
     box-shadow:         10px 10px 20px -2px #393D3F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.modal-nav {
+    height: 10%;
+}
+
+.modal-content {
+    height: 80%;
+    padding: 0 20px;
+}
+
+.modal-content-hdr {
+    text-align: center;
+}
+
+.form-group {
+    margin: 25px 0;
+}
+
+form {
+    text-align: center;
+}
+
+label {
+    display: block;
+}
+
+.modal-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.modal-nav-link {
+    padding: 0 30px;
+}
+
+input {
+    display: block;
+    font-family: FontAwesome, 'Roboto', sans-serif;
+    width: 60%;
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid #393D3F;
+    padding: 5px 0 0 5px;
+    font-size: 1em;
+    margin: 0 auto;
+    color: #393D3F;
+}
+
+input:focus {
+    outline: none;
+    background: rgba(0,0,0,.1);
+    /* border-radius: 5px; */
+}
+
+.continue {
+    padding: 10px;
+    background-color: #62929E;
+    color: #FDFDFF;
+    border: none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 100px;
+}
+
+.continue:focus {
+    outline: none;
+}
+
 
 
 @media (min-width: 576px) {

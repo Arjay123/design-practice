@@ -5,10 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign Up Page</title>
 
+    <script src="https://use.fontawesome.com/139a6099b5.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
 
-    <div class="modal" id="modal"></div>
+    <div class="modal" id="modal">
+        <div class="modal-nav">
+            <nav id="nav">
+                <a class="modal-nav-link" name="login" onclick="">Login</a>
+                <a class="modal-nav-link" name="signup" onclick="">Signup</a>
+            </nav>
+        </div>
+        <div class="modal-content" id="signup-1">
+            <div class="modal-content-hdr">
+                <h1>Sign Up</h1>
+            </div>
+            <div class="modal-content-body">
+                <form id="email-form">
+                    <div class="form-group">
+                        <input type="text" name="username" id="username" placeholder="&#xf007;&#9;Username">
+                    </div>
+                    <div class="form-group">
+                            <input type="text" name="email" id="email" placeholder="&#xf0e0;&#9;Email">
+                        </div>
+                    <div class="form-group">
+                        <input type="password" name="password" id="password" placeholder="&#xf023;&#9;Password">
+                    </div>
+                    <button type="button" class="continue">Submit</button>
+                </form>
+            </div>
+            <div class="modal-content-nav">
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
