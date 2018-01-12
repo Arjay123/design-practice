@@ -1,20 +1,27 @@
-body {
-    background-color: #A1B5D8;
+body, html {
+
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    height: 100%;
 
 }
 
-.checkout-wrap {
-    width: 80%;
-    height: 80%;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.checkout {
+    height: 100%;
     background-color: #FFFCF7;
-    -moz-box-shadow:    0 0 50px #393D3F;
-    -webkit-box-shadow: 0 0 50px #393D3F;
-    box-shadow:         0 0 50px #393D3F;
-    border-radius: 15px;
+    margin: 20px;
+}
+
+.checkout-child {
     padding: 20px;
+}
+
+.checkout-hdr {
+    height: 25%;
+    background-color:red;
+}
+
+.checkout-body {
+    height: 75%;
+    background-color:blue;
 }
