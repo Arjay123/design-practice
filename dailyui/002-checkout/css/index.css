@@ -3,13 +3,20 @@ body, html {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     height: 100%;
-
+    color: #738290;
+    background-color: #738290;
 }
 
 .checkout {
-    height: 100%;
+    height: 85%;
+    width: 90%;
+    /* margin: 20px; */
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
     background-color: #FFFCF7;
-    margin: 20px;
+    box-shadow: 3px 3px 50px #000;
 }
 
 .checkout-child {
@@ -18,12 +25,7 @@ body, html {
 
 .checkout-hdr {
     height: 25%;
-    border:1px solid red;
-}
-
-.checkout-body {
-    height: 75%;
-    border:1px solid blue;
+    /* border:1px solid red; */
 }
 
 .checkout-hdr {
@@ -81,6 +83,121 @@ body, html {
 .progress-bar li:first-child:after {
     content: none;
 }
+
+.checkout-body {
+    height: 75%;
+    /* border:1px solid blue; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    padding-top: 0;
+}
+
+.checkout-body-hdr {
+    width: 100%;
+    /* background: red; */
+}
+
+.customer-info-wrap {
+    /* background:blue; */
+    width: 45%;
+}
+
+.order {
+    /* background: green; */
+    width: 45%;
+}
+
+.shipping-hdr:after {
+    content: ' ';
+    background: black;
+    height:2px;
+    width: 100%;
+}
+
+h4 {
+    margin: 0;
+    color: #CFC7D2;
+    text-transform: uppercase;
+}
+
+.payment-wrapper {
+    padding-left: 2px;
+}
+.address-wrapper {
+    padding-left: 2px;
+    font-size: .7em;
+    line-height: 1.5em;
+}
+
+.order-wrapper {
+    font-size: .7em;
+}
+
+.shipping {
+    margin-bottom: 20px;
+}
+
+hr {
+    border-style: solid;
+    color: #CFC7D2;
+}
+
+.credit-card {
+    /* height: 150px; */
+    background-color: #A1B5D8;
+    border-radius: 10px;
+    color: #FFFCF7;
+    padding: 5px;
+}
+
+.credit-card-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.credit-card label {
+    font-size: .6em;
+    display: block;
+}
+
+.form-group input {
+    height: 25px;
+    box-sizing: border-box;
+    /* width: 100%; */
+}
+
+.form-group {
+    margin: 5px;
+}
+
+.form-group input {
+    min-width: 100%;
+    max-width: 100%;
+    display: inline-block;
+}
+
+.large {
+    width: 100%;
+}
+
+.small {
+    width: 45%;
+}
+
+.group-cvc {
+    float: right;
+}
+
+
+
+
+
+
 /*
 
 .progress-bar li.active:before,
