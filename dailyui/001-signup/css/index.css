@@ -16,18 +16,22 @@ body {
     -moz-box-shadow:    10px 10px 20px -2px #393D3F;
     -webkit-box-shadow: 10px 10px 20px -2px #393D3F;
     box-shadow:         10px 10px 20px -2px #393D3F;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
+    overflow: hidden;
 }
 
 .modal-nav {
     height: 10%;
+    padding-top: 20px;
 }
 
 .modal-content {
-    height: 80%;
-    padding: 0 20px;
+    height: 90%;
+    /* padding: 0 20px; */
+    width: 100%;
+    position: absolute;
 }
 
 .modal-content-hdr {
@@ -47,13 +51,32 @@ label {
 }
 
 .modal-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    text-align: center;
+}
+
+#modal-nav-group {
+    margin: 0 auto;
+    list-style: none;
+    -webkit-margin-before: 0;
+    -webkit-padding-start: 0;
+}
+
+.modal-nav-li {
+    padding: 0 30px;
+    display: inline;
 }
 
 .modal-nav-link {
-    padding: 0 30px;
+    text-decoration: none;
+    color: #393D3F;
+}
+
+#nav-underline {
+    position: absolute;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background: #393D3F;
 }
 
 input {
@@ -72,7 +95,6 @@ input {
 input:focus {
     outline: none;
     background: rgba(0,0,0,.1);
-    /* border-radius: 5px; */
 }
 
 .continue {
@@ -89,9 +111,16 @@ input:focus {
 
 .continue:focus {
     outline: none;
+    left: 100%;
 }
 
+#login {
+    left: 0;
+}
 
+#signup {
+    left: 100%;
+}
 
 @media (min-width: 576px) {
     .modal {
