@@ -5,6 +5,7 @@ body {
     height: 100vh;
     font-family: 'Open Sans', sans-serif;
     color: #FEF9F1;
+    font-size: 16px;
 }
 
 
@@ -67,14 +68,16 @@ body {
 
 .site-body {
     display: flex;
-    font-size: 3em;
+    /* font-size:  */
+    height: 60%;
 }
 
 
 .site-body-text {
     margin: auto;
     position: relative;
-    left: -100px;
+    left: -2em;
+    width: 50%;
 }
 
 
@@ -94,7 +97,70 @@ body {
     top: -0.4em;
 }
 
-.egg-hero {
+.egg-wrapper {
     width: 50%;
-    height: 50%;
+    margin: auto;
+}
+
+.egg-hero {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media (min-width: 576px) {
+    .site-body {
+        font-size: 1.3em;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .landing-page {
+        background: linear-gradient(
+            to right top,
+            #FEF9F1 0%,
+            #FEF9F1 40%,
+            #393E41 40%,
+            #393E41 100%
+        );
+    }
+
+    .site-body {
+        font-size: 2em;
+    }
+
+    .site-body-text {
+        left: -3em;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .site-body {
+        font-size: 3em;
+    }
+
+    .site-body-text {
+        left: -2em;
+    }
+}
+
+@media (min-width: 1441px) {
+    .site-body {
+        font-size: 5em;
+    }
+
+    .site-body-text {
+        left: -2em;
+    }
+
+    .landing-page {
+        background: linear-gradient(
+            to right top,
+            #FEF9F1 0%,
+            #FEF9F1 30%,
+            #393E41 30%,
+            #393E41 100%
+        );
+    }
 }
