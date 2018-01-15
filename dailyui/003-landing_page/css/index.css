@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    color: #FEF9F1;
+}
+
+
+.landing-page {
+    background: linear-gradient(
+        to right top,
+        #FEF9F1 0%,
+        #FEF9F1 40%,
+        #393E41 40%,
+        #393E41 100%
+    );
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10%;
+}
+
+
+.site-hdr {
+    width: 60%;
+    margin: auto;
+
+}
+
+
+.site-hdr-text {
+    font-weight: 800;
+}
+
+
+.nav-wrapper {
+    width: 40%;
+}
+
+
+.navbar {
+    float: right;
+    -webkit-padding-start: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navbar li {
+    display: inline-block;
+}
+
+
+.navbar li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.site-body {
+    display: flex;
+    font-size: 3em;
+}
+
+
+.site-body-text {
+    margin: auto;
+    position: relative;
+    left: -100px;
+}
+
+
+.site-body-text h1 {
+    font-weight: 800;
+}
+
+
+.site-body h1,
+.site-body h6 {
+    margin: 0;
+}
+
+
+.egg-text {
+    position: relative;
+    top: -0.4em;
+}
+
+.egg-hero {
+    width: 50%;
+    height: 50%;
+}
