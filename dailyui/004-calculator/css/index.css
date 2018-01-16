@@ -8,7 +8,7 @@ body {
 }
 
 .calculator {
-    width: 80%;
+    width: 75%;
     height: 80%;
     display: flex;
     flex-direction: column;
@@ -72,3 +72,21 @@ body {
     background-color: #91818A;
 }
 
+@media (min-width: 576px) {
+    .calculator {
+        width: 70%;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .calculator {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .calculator {
+        width: 40%;
+    }
+}
