@@ -100,11 +100,11 @@ input:checked + .slider:before {
     transform: translateX(25px);
 }
 
-.dropdown input {
+.dropdown-icon input {
     display: none;
 }
 
-.dropdown i {
+.dropdown-icon i {
     -webkit-transition: .2s;
     transition: .2s;
 }
