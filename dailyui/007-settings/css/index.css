@@ -64,7 +64,7 @@ body {
 }
 
 .toggle input {
-    display: none;
+    /* display: none; */
 }
 
 .slider {
@@ -98,4 +98,19 @@ input:checked + .slider:before {
     -webkit-transform: translateX(25px);
     -ms-transform: translateX(25px);
     transform: translateX(25px);
+}
+
+.dropdown input {
+    display: none;
+}
+
+.dropdown i {
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.dropdown input:checked + i{
+    transform: rotateZ(90deg);
+    -webkit-transition: .2s;
+    transition: .2s;
 }
