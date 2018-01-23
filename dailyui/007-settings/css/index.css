@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: lightgrey;
+}
+
+.settings {
+    box-shadow: 5px 5px 5px black;
+    width: 50%;
+    margin: auto;
+    background-color: white;
+}
