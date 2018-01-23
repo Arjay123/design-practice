@@ -114,3 +114,7 @@ input:checked + .slider:before {
     -webkit-transition: .2s;
     transition: .2s;
 }
+
+.settings-group:last-child {
+    padding-bottom: 25px;
+}
