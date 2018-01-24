@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 10vh 0;
+    background-color: #ccc;
+}
+
+.player {
+    width: 40%;
+    height: 80%;
+    box-shadow: 3px 3px 10px darkgrey;
+    background-color: white;
+    margin: auto;
+    padding: 25px;
+}
+
+.track {
+    text-align: center;
+}
+
+.track-detail-hdr {
+    margin: 10px 0 0 0;
+}
+
+.art-img {
+    max-width: 50%;
+    border: 4px solid black;
+    border-radius: 50%;
+}
