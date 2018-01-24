@@ -60,3 +60,23 @@ input[type=range]::-webkit-slider-runnable-track {
         lightgrey 100%);
     border-radius: 25px;
 }
+
+.remaining-time {
+    float: right;
+}
+
+.track-playback {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+}
+
+.playback-ctrl {
+    align-self: center;
+}
+
+.play {
+    border: 2px solid black;
+    padding: 10px 13px;
+    border-radius: 50%;
+}
