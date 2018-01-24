@@ -71,6 +71,23 @@ body {
     );
 }
 
+.controls {
+    margin: 25px 0;
+}
+
+.playback-btn {
+    border: none;
+    border-color: black;
+}
+
+.playback-btn:focus {
+    outline: none;
+}
+
+.playback-btn:active:hover {
+    color: #ccc;
+    border-color: #ccc;
+}
 
 .remaining-time {
     float: right;
@@ -87,7 +104,7 @@ body {
 }
 
 .play {
-    border: 2px solid black;
+    border: 2px solid;
     padding: 10px 13px;
     border-radius: 50%;
 }
