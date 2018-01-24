@@ -40,6 +40,13 @@ body {
     display: flex;
     padding: 10px;
     border-bottom: 1px solid lightgrey;
+    flex-wrap: wrap;
+}
+
+.dropdown-window {
+    width: 100%;
+    display: none;
+    padding: 25px;
 }
 
 .setting-icon {
@@ -114,6 +121,7 @@ input:checked + .slider:before {
     -webkit-transition: .2s;
     transition: .2s;
 }
+
 
 .settings-group:last-child {
     padding-bottom: 25px;
