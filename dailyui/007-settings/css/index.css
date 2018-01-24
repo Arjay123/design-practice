@@ -1,29 +1,31 @@
 body {
     margin: 0;
     padding: 20px;
-    background-color: lightgrey;
+    background-color: #DCE0D9;
+    font-family: 'Lato', sans-serif;
+    color: #595959;
 }
 
 .settings {
     box-shadow: 5px 5px 5px black;
     width: 50%;
+    min-height: 90vh;
     margin: auto;
     background-color: white;
 }
 
 .settings-group {
-    /* margin: 25px 0; */
     padding: 25px 25px 0 25px;
 }
 
 .main-hdr {
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid #595959;
     padding: 10px 10px 0;
 }
 
 .setting-hdr-wrap {
     margin: 10px 0;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid #595959;
 }
 
 .setting-hdr {
@@ -39,7 +41,7 @@ body {
 .setting-item {
     display: flex;
     padding: 10px;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid #595959;
     flex-wrap: wrap;
 }
 
@@ -80,7 +82,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #DCE0D9;
     border-radius: 25px;
 }
 
@@ -98,7 +100,7 @@ body {
 }
 
 input:checked + .slider {
-    background-color: blue;
+    background-color: #808F85;
 }
 
 input:checked + .slider:before {
