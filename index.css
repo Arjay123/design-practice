@@ -5,3 +5,51 @@ body {
 header {
     text-align: center;
 }
+
+.boxes-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box {
+    background-color: white;
+    overflow: hidden;
+    width: 20%;
+    margin: 20px;
+}
+
+.thumb {
+    max-height: 150px;
+}
+
+.box-body {
+    position: relative;
+}
+
+.box-id-wrap {
+    position: absolute;
+    top: -25px;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 5px;
+    text-align: center;
+    left: 50%;
+    background-color: white;
+    font-size: 25px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-name-wrap {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.box-name {
+    font-size: 25px;
+}
