@@ -1,4 +1,31 @@
-(function(){
+$(function(){
+
+    $("#sort-group").append("<li id='nav-underline'></li>");
+
+    $navline = $('#nav-underline');
+    $navline
+        .width($('.current-nav .sort-item-link').width())
+        .css('left', $('.current-nav .sort-item-link').position().left)
+        .data("prevLeft", $navline.position.left)
+        .data("prevWidth", $navline.width());
+
+    $(".sort-item").click(function(){
+        move_underline($(this));
+    });
+
+    function move_underline(element){
+
+        var new_left = element.children().position().left;
+        var new_width = element.width();
+
+        $navline.stop().animate({
+            left: new_left,
+            width: new_width
+        });
+    }
+
+
+
 
     function create_sample(sample) {
         var $box = $("<div>", {"class": "box"});
@@ -34,4 +61,4 @@
     }
 
     refresh_content(samples);
-})();
+});
