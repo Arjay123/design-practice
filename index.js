@@ -9,9 +9,26 @@ $(function(){
         .data("prevLeft", $navline.position.left)
         .data("prevWidth", $navline.width());
 
+
     $(".sort-item").click(function(){
         move_underline($(this));
+        samples.sort(sort_by_key($(this).children()[0].innerText.toLowerCase()));
+        refresh_content(samples);
     });
+
+
+    function sort_by_key(key){
+        return function(a, b){
+            if (a[key] > b[key]) {
+                return 1;
+            }
+            else if (a[key] < b[key]) {
+                return -1;
+            }
+            return 0;
+        }
+    }
+
 
     function move_underline(element){
 
