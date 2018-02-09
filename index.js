@@ -12,8 +12,8 @@ $(function(){
 
     $(".sort-item").click(function(){
         move_underline($(this));
-        samples.sort(sort_by_key($(this).children()[0].innerText.toLowerCase()));
-        refresh_content(samples);
+        var key = $(this).children()[0].innerText.toLowerCase();
+        refresh_content(samples, {key: key});
     });
 
 
@@ -66,16 +66,45 @@ $(function(){
         return $box;
     };
 
-    function box_clicked(test){
-        location.href = test.data;
+    function box_clicked(url){
+        location.href = url.data;
     }
 
-    function refresh_content(samples_arr){
+    function refresh_content(samples_arr, {key='id', animate=true}){
+
+        if(animate){
+            if(key==='name'){
+                $('.boxes-wrapper').animate({left: '-100%'}, function(){
+                    $('.boxes-wrapper').css('left', '100%');
+                    sort_content(samples_arr, key);
+                    $('.boxes-wrapper').animate({left: '0%'},()=>{
+                        $('.boxes-wrapper').css('left', '');
+                    });
+                });
+            }
+            else {
+                $('.boxes-wrapper').animate({right: '-100%'}, function(){
+                    $('.boxes-wrapper').css('right', '100%');
+                    sort_content(samples_arr, key);
+                    $('.boxes-wrapper').animate({right: '0%'}, ()=>{
+                        $('.boxes-wrapper').css('right', '');
+                    });
+                });
+            }
+        }
+        else {
+            sort_content(samples_arr, key);
+        }
+    }
+
+
+    function sort_content(samples_arr, key){
         $('.boxes-wrapper').empty();
+        samples.sort(sort_by_key(key));
         samples_arr.map((sample)=>{
             $('.boxes-wrapper').append(create_sample(sample));
         });
     }
 
-    refresh_content(samples);
+    refresh_content(samples, {animate: false});
 });
