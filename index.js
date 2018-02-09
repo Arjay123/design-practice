@@ -68,7 +68,7 @@ $(function(){
     function create_sample(sample) {
         var $box = $("<div>", {"class": "box"});
         var box_hdr = `<div class="box-hdr">
-            <img class="thumb" src="${sample.screenshot}">
+            <img class="thumb" src="./screenshots/${sample.screenshot}">
         </div>`;
 
         var box_body = `
