@@ -16,6 +16,27 @@ $(function(){
         refresh_content(samples, {key: key});
     });
 
+    $('.boxes-wrapper').empty();
+    samples.map((sample)=>{
+        $('.boxes-wrapper').append(create_sample(sample));
+    });
+
+    var $grid = $('.boxes-wrapper').isotope({
+        itemSelector: '.box',
+        getSortData: {
+            name: '.name',
+            id: '.number parseInt'
+        },
+        sortBy: 'number',
+        layoutMode: 'fitRows',
+        resizeable: false
+    });
+
+    $grid.imagesLoaded().progress( function() {
+        $grid.isotope('layout');
+    });
+
+
 
     function sort_by_key(key){
         return function(a, b){
@@ -53,10 +74,10 @@ $(function(){
         var box_body = `
         <div class="box-body">
             <div class="box-id-wrap">
-                <span class="box-id">${sample.id}</span>
+                <span class="box-id number">${sample.id}</span>
             </div>
             <div class="box-name-wrap">
-                <span class="box-name">${sample.name}</span>
+                <span class="box-name name">${sample.name}</span>
             </div>
         </div>
         `;
@@ -72,38 +93,34 @@ $(function(){
 
     function refresh_content(samples_arr, {key='id', animate=true}){
 
-        if(animate){
-            if(key==='name'){
-                $('.boxes-wrapper').animate({left: '-100%'}, function(){
-                    $('.boxes-wrapper').css('left', '100%');
-                    sort_content(samples_arr, key);
-                    $('.boxes-wrapper').animate({left: '0%'},()=>{
-                        $('.boxes-wrapper').css('left', '');
-                    });
-                });
-            }
-            else {
-                $('.boxes-wrapper').animate({right: '-100%'}, function(){
-                    $('.boxes-wrapper').css('right', '100%');
-                    sort_content(samples_arr, key);
-                    $('.boxes-wrapper').animate({right: '0%'}, ()=>{
-                        $('.boxes-wrapper').css('right', '');
-                    });
-                });
-            }
-        }
-        else {
+        // if(animate){
+        //     if(key==='name'){
+        //         $('.boxes-wrapper').animate({left: '-100%'}, function(){
+        //             $('.boxes-wrapper').css('left', '100%');
+        //             sort_content(samples_arr, key);
+        //             $('.boxes-wrapper').animate({left: '0%'},()=>{
+        //                 $('.boxes-wrapper').css('left', '');
+        //             });
+        //         });
+        //     }
+        //     else {
+        //         $('.boxes-wrapper').animate({right: '-100%'}, function(){
+        //             $('.boxes-wrapper').css('right', '100%');
+        //             sort_content(samples_arr, key);
+        //             $('.boxes-wrapper').animate({right: '0%'}, ()=>{
+        //                 $('.boxes-wrapper').css('right', '');
+        //             });
+        //         });
+        //     }
+        // }
+        // else {
             sort_content(samples_arr, key);
-        }
+        // }
     }
 
 
     function sort_content(samples_arr, key){
-        $('.boxes-wrapper').empty();
-        samples.sort(sort_by_key(key));
-        samples_arr.map((sample)=>{
-            $('.boxes-wrapper').append(create_sample(sample));
-        });
+        $grid.isotope({sortBy: key});
     }
 
     refresh_content(samples, {animate: false});
