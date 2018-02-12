@@ -11,7 +11,8 @@ header {
     margin-bottom: 50px;
 }
 
-.hdr {
+.hdr,
+.link {
     color: #FF715B;
 }
 
@@ -38,7 +39,7 @@ header {
 
 .showcase {
     flex: 1;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 #sort-group {
@@ -81,14 +82,15 @@ header {
 }
 
 .box {
-    background-color: #FF715B;
+    background-color: #757C82;
     overflow: hidden;
     width: 27%;
     margin: 3%;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
     border-radius: 10px;
-    height: 300px;
+    /* height: 300px; */
     color: white;
+    font-size: 20px;
 }
 
 .box-hdr {
@@ -113,7 +115,7 @@ header {
     padding: 5px;
     text-align: center;
     left: 50%;
-    background-color: #FF715B;
+    background-color: #757C82;
     font-size: 20px;
     transform: translateX(-50%);
     border-radius: 50%;
@@ -128,5 +130,5 @@ header {
 }
 
 .box-name {
-    font-size: 20px;
+
 }

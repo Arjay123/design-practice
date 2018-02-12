@@ -28,7 +28,7 @@ $(function(){
             id: '.number parseInt'
         },
         sortBy: 'number',
-        layoutMode: 'fitRows',
+        layoutMode: 'masonry',
         resizeable: false
     });
 
@@ -71,12 +71,15 @@ $(function(){
             <img class="thumb" src="./screenshots/${sample.screenshot}">
         </div>`;
 
+        var box_id = `<div class="box-id-wrap">
+        <span class="box-id number">${sample.id}</span>
+        </div>
+        `
+
         var box_body = `
         <div class="box-body">
-            <div class="box-id-wrap">
-                <span class="box-id number">${sample.id}</span>
-            </div>
             <div class="box-name-wrap">
+                <span class="number">${sample.id}.</span>
                 <span class="box-name name">${sample.name}</span>
             </div>
         </div>
