@@ -16,7 +16,7 @@ $(function(){
         refresh_content(samples, {key: key});
     });
 
-    $('.boxes-wrapper').empty();
+    // $('.boxes-wrapper').empty();
     samples.map((sample)=>{
         $('.boxes-wrapper').append(create_sample(sample));
     });
@@ -29,7 +29,12 @@ $(function(){
         },
         sortBy: 'number',
         layoutMode: 'masonry',
-        resizeable: false
+        resizeable: false,
+        masonry: {
+            gutter: '.gutter-sizer',
+            columnWidth: '.grid-sizer'
+        },
+        percentPosition: true
     });
 
     $grid.imagesLoaded().progress( function() {
