@@ -22,8 +22,10 @@ header {
 }
 
 .sidebar {
+    width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 5% 5% 5% 5%;
 }
 
@@ -49,7 +51,6 @@ header {
 
 .showcase {
     flex: 1;
-    overflow-x: hidden;
 }
 
 #sort-group {
@@ -91,7 +92,6 @@ header {
 .box {
     background-color: #757C82;
     overflow: hidden;
-    width: 100%;
     margin: 3% 0;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
     border-radius: 10px;
@@ -135,10 +135,55 @@ header {
     text-align: center;
 }
 
-@media (min-width: 426px) {
+.box,
+.grid-sizer {
+    width: 100%;
+}
 
+@media (min-width: 426px) {
+    .gutter-sizer {
+        width: 4%;
+    }
+
+    .box,
+    .grid-sizer {
+        width: 48%;
+    }
 }
 
 @media (min-width: 769px) {
+    .sidebar {
+        width: 15%;
+        display: block;
+    }
 
+    .sidebar-hdr {
+        width: 100%;
+        margin: 0;
+    }
+
+    .sidebar-body {
+        align-self: flex-start;
+    }
+
+    .gutter-sizer {
+        width: 8%;
+    }
+
+    .box,
+    .grid-sizer {
+        width: 28%;
+    }
+
+    .showcase {
+        margin-top: 5%;
+    }
+
+    #sort-group {
+        margin-bottom: 0;
+    }
+
+    .boxes-wrapper {
+        margin-top: 0;
+    }
 }
