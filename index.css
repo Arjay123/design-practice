@@ -161,13 +161,14 @@ header {
     right: 30px;
     background: none;
     margin: 0 0 0 auto;
+    transition: all .2s;
     visibility: hidden;
     opacity: 0;
-    transition: all .2s;
     cursor: pointer;
 }
 
-.modal-window:hover .close{
+.modal-window:hover .close,
+.modal-window:focus .close {
     visibility: visible;
     opacity: 1;
 }
