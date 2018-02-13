@@ -2,6 +2,7 @@ $(function(){
 
     var URLBASE = 'https://arjay123.github.io/design-practice';
 
+    // init ul sort functionality
     $("#sort-group").append("<li id='nav-underline'></li>");
 
     $navline = $('#nav-underline');
@@ -11,18 +12,19 @@ $(function(){
         .data("prevLeft", $navline.position.left)
         .data("prevWidth", $navline.width());
 
+    $(".sort-item").click(function(){
+        move_underline($(this));
+        var key = $(this).children()[0].innerText.toLowerCase();
+        sort_content(samples, key);
+    });
+
+    // init modal close
     $('#close-btn').click(function(){
         $('#view').attr('src', '');
         $('.modal-wrap').toggle();
     });
 
-    $(".sort-item").click(function(){
-        move_underline($(this));
-        var key = $(this).children()[0].innerText.toLowerCase();
-        refresh_content(samples, {key: key});
-    });
-
-    // $('.boxes-wrapper').empty();
+    // init sample grid w/ isotope
     samples.map((sample)=>{
         $('.boxes-wrapper').append(create_sample(sample));
     });
@@ -35,7 +37,6 @@ $(function(){
         },
         sortBy: 'number',
         layoutMode: 'masonry',
-        resizeable: false,
         masonry: {
             gutter: '.gutter-sizer',
             columnWidth: '.grid-sizer'
@@ -48,20 +49,7 @@ $(function(){
     });
 
 
-
-    function sort_by_key(key){
-        return function(a, b){
-            if (a[key] > b[key]) {
-                return 1;
-            }
-            else if (a[key] < b[key]) {
-                return -1;
-            }
-            return 0;
-        }
-    }
-
-
+    /* animates underline underneath nav element when clicked */
     function move_underline(element){
 
         var new_left = element.children().position().left;
@@ -74,8 +62,7 @@ $(function(){
     }
 
 
-
-
+    /* creates a box component from sample object */
     function create_sample(sample) {
         var $box = $("<div>", {"class": "box"});
         var box_hdr = `<div class="box-hdr">
@@ -101,42 +88,16 @@ $(function(){
         return $box;
     };
 
+
+    /* opens modal window when clicked */
     function box_clicked(url){
         $('#view').attr('src', URLBASE + url.data);
         $('.modal-wrap').toggle();
     }
 
-    function refresh_content(samples_arr, {key='id', animate=true}){
 
-        // if(animate){
-        //     if(key==='name'){
-        //         $('.boxes-wrapper').animate({left: '-100%'}, function(){
-        //             $('.boxes-wrapper').css('left', '100%');
-        //             sort_content(samples_arr, key);
-        //             $('.boxes-wrapper').animate({left: '0%'},()=>{
-        //                 $('.boxes-wrapper').css('left', '');
-        //             });
-        //         });
-        //     }
-        //     else {
-        //         $('.boxes-wrapper').animate({right: '-100%'}, function(){
-        //             $('.boxes-wrapper').css('right', '100%');
-        //             sort_content(samples_arr, key);
-        //             $('.boxes-wrapper').animate({right: '0%'}, ()=>{
-        //                 $('.boxes-wrapper').css('right', '');
-        //             });
-        //         });
-        //     }
-        // }
-        // else {
-            sort_content(samples_arr, key);
-        // }
-    }
-
-
+    /* sorts samples by key using isotope */
     function sort_content(samples_arr, key){
         $grid.isotope({sortBy: key});
     }
-
-    refresh_content(samples, {animate: false});
 });
