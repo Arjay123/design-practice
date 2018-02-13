@@ -1,5 +1,7 @@
 $(function(){
 
+    var URLBASE = 'https://arjay123.github.io/design-practice';
+
     $("#sort-group").append("<li id='nav-underline'></li>");
 
     $navline = $('#nav-underline');
@@ -9,6 +11,10 @@ $(function(){
         .data("prevLeft", $navline.position.left)
         .data("prevWidth", $navline.width());
 
+    $('#close-btn').click(function(){
+        $('#view').attr('src', '');
+        $('.modal-wrap').toggle();
+    });
 
     $(".sort-item").click(function(){
         move_underline($(this));
@@ -96,7 +102,8 @@ $(function(){
     };
 
     function box_clicked(url){
-        location.href = url.data;
+        $('#view').attr('src', URLBASE + url.data);
+        $('.modal-wrap').toggle();
     }
 
     function refresh_content(samples_arr, {key='id', animate=true}){
