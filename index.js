@@ -19,7 +19,7 @@ $(function(){
     });
 
     // init modal close
-    $('#close-btn').click(function(){
+    $('#close-btn').add('.modal-wrap').click(function(){
         $('#view').attr('src', '');
         $('.modal-wrap').toggle();
     });
