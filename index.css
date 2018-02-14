@@ -5,6 +5,7 @@ body {
     padding: 0 5%;
     font-family: 'Roboto', sans-serif;
     color: #424B54;
+    position: relative;
 }
 
 header {
@@ -78,8 +79,8 @@ header {
 
 #nav-underline {
     position: absolute;
-    left: 0;
-    width: 100px;
+    /* left: 0; */
+    /* width: 100px; */
     height: 2px;
     background: #FF715B;
 }
@@ -136,18 +137,25 @@ header {
     height: 100%;
     left: 0;
     top: 0;
+    bottom: 0;
+    right: 0;
     z-index: 1;
     background-color: rgba(0,0,0,0.4);
     display: none;
+    overflow-x: hidden;
 }
 
 .modal-window {
-    width: 80%;
+    /* width: 100%; */
+    height: 100%;
     background-color: white;
-    margin: 7vh auto;
-    padding: 3vh;
+    /* margin: 7vh auto; */
+    /* padding: 5%; */
     text-align: right;
     position: relative;
+    overflow-y: auto;
+    -webkit-overflow-scrolling:touch;
+    /* overflow-x: hidden; */
 }
 
 .close {
@@ -156,32 +164,25 @@ header {
     height: 25px;
     font-size: 25px;
     border: none;
-    color: white;
+    color: #FF715B;
     position: absolute;
-    right: 30px;
+    right: 0;
     background: none;
     margin: 0 0 0 auto;
     transition: all .2s;
-    visibility: hidden;
-    opacity: 0;
     cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-.modal-window:hover .close,
-.modal-window:focus .close {
-    visibility: visible;
-    opacity: 1;
-}
-
-.close:focus {
-    outline: none;
-}
 
 .view {
+    /* margin: 5%; */
     width: 100%;
-    height: 80vh;
+    height: 100%;
     border: none;
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    /* box-shadow: 0px 3px 15px rgba(0,0,0,0.2); */
 }
 
 .box-name-wrap {

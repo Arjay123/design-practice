@@ -1,16 +1,11 @@
-$(function(){
+$(document).ready(function(){
 
-    var URLBASE = 'https://arjay123.github.io/design-practice';
+    //var URLBASE = 'https://arjay123.github.io/design-practice';
+    var URLBASE = 'http://192.168.42.69:8000';
 
     // init ul sort functionality
     $("#sort-group").append("<li id='nav-underline'></li>");
-
     $navline = $('#nav-underline');
-    $navline
-        .width($('.current-nav .sort-item-link').width())
-        .css('left', $('.current-nav .sort-item-link').position().left)
-        .data("prevLeft", $navline.position.left)
-        .data("prevWidth", $navline.width());
 
     $(".sort-item").click(function(){
         move_underline($(this));
@@ -21,7 +16,8 @@ $(function(){
     // init modal close
     $('#close-btn').add('.modal-wrap').click(function(){
         $('#view').attr('src', '');
-        $('.modal-wrap').toggle();
+        $('.modal-wrap').hide();
+        $('body').add('html').css('overflow', '');
     });
 
     // init sample grid w/ isotope
@@ -46,6 +42,15 @@ $(function(){
 
     $grid.imagesLoaded().progress( function() {
         $grid.isotope('layout');
+    });
+
+    // display navline
+    $(window).on('load', function(){
+        $navline
+            .width($('#id-sort').width())
+            .css('left', $('#id-sort').position().left)
+            .data("prevLeft", $navline.position.left)
+            .data("prevWidth", $navline.width());
     });
 
 
@@ -92,7 +97,8 @@ $(function(){
     /* opens modal window when clicked */
     function box_clicked(url){
         $('#view').attr('src', URLBASE + url.data);
-        $('.modal-wrap').toggle();
+        $('.modal-wrap').show();
+        $('body').add('html').css('overflow', 'hidden');
     }
 
 

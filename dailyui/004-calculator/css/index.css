@@ -5,6 +5,7 @@ body {
     /* color: white; */
     background-color: #F4E8C1;
     color: #FBFEFB;
+    font-size: 40px;
 }
 
 .calculator {
@@ -13,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    box-shadow: 3px 3px 50px #393D3F;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
     border-radius: 25px;
     top: 50%;
     left: 50%;
@@ -23,11 +24,18 @@ body {
     background-color: #FBFEFB;
 }
 
-.screen-text {
+.screen-text-wrap {
     text-align: right;
-    font-size: 50px;
+    /* font-size: 50px; */
     border-radius: 25px;
-    margin: 10px;
+    /* margin: 10px; */
+    height: 100%;
+    display: flex;
+}
+
+.screen-text {
+    margin: auto;
+    margin-right: 5px;
 }
 
 .screen {
@@ -40,7 +48,7 @@ body {
     width: 24%;
     position: relative;
     border-radius: 25px;
-    font-size: 50px;
+    /* font-size: 50px; */
 }
 
 .button-group {

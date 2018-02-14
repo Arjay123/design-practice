@@ -8,7 +8,7 @@ body {
 
 .settings {
     box-shadow: 5px 5px 5px black;
-    width: 50%;
+    width: 95%;
     min-height: 90vh;
     margin: auto;
     background-color: white;
@@ -127,4 +127,16 @@ input:checked + .slider:before {
 
 .settings-group:last-child {
     padding-bottom: 25px;
+}
+
+@media (min-width: 576px) {
+    .settings {
+        width: 70%;
+    }
+}
+
+@media (min-width: 769px) {
+    .settings {
+        width: 50%;
+    }
 }
