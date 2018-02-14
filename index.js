@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
-    //var URLBASE = 'https://arjay123.github.io/design-practice';
-    var URLBASE = 'http://192.168.42.69:8000';
+    var URLBASE = 'https://arjay123.github.io/design-practice';
 
     // init ul sort functionality
     $("#sort-group").append("<li id='nav-underline'></li>");
