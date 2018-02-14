@@ -6,12 +6,12 @@ body {
 }
 
 .player {
-    width: 40%;
+    width: 80%;
     height: 80%;
     box-shadow: 3px 3px 10px black;
     background-color: #F1F7ED;
     margin: auto;
-    padding: 25px;
+    padding: 5%;
     color: #243E36;
 }
 
@@ -143,4 +143,16 @@ body {
         #D9DD92 50%,
         #D9DD92 100%
     );
+}
+
+@media (min-width: 576px) {
+    .player {
+        width: 60%;
+    }
+}
+
+@media (min-width: 769px) {
+    .player {
+        width: 40%;
+    }
 }
