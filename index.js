@@ -1,6 +1,7 @@
 $(function(){
 
-    var URLBASE = 'https://arjay123.github.io/design-practice';
+    //var URLBASE = 'https://arjay123.github.io/design-practice';
+    var URLBASE = 'http://192.168.42.69:8000';
 
     // init ul sort functionality
     $("#sort-group").append("<li id='nav-underline'></li>");
@@ -21,7 +22,8 @@ $(function(){
     // init modal close
     $('#close-btn').add('.modal-wrap').click(function(){
         $('#view').attr('src', '');
-        $('.modal-wrap').toggle();
+        $('.modal-wrap').hide();
+        $('body').add('html').css('overflow', '');
     });
 
     // init sample grid w/ isotope
@@ -92,7 +94,8 @@ $(function(){
     /* opens modal window when clicked */
     function box_clicked(url){
         $('#view').attr('src', URLBASE + url.data);
-        $('.modal-wrap').toggle();
+        $('.modal-wrap').show();
+        $('body').add('html').css('overflow', 'hidden');
     }
 
 
