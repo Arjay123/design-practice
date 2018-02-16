@@ -1,0 +1,66 @@
+body {
+    background: #4B5043;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.messages-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flash {
+    width: 90%;
+    margin: 5% auto;
+}
+
+.flash-wrap {
+    width: 90%;
+    margin: auto;
+    padding: 5%;
+    background: #171717;
+    color: #FFFFFC;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+.button {
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    background: #1098F7;
+}
+
+.button:focus {
+    outline: none;
+}
+
+
+.icon {
+    max-width: 100%;
+}
+
+.icon-wrap {
+    width: 40%;
+    padding: 5%;
+    margin: auto;
+}
+
+.text-wrap {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+@media (min-width: 426px) {
+    .flash {
+        width: 60%;
+    }
+}
+
+@media (min-width: 769px) {
+    .flash {
+        width: 40%;
+    }
+}
