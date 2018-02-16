@@ -1,0 +1,28 @@
+{
+  "name": "design-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arjay123/design-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arjay123/design-practice/issues"
+  },
+  "homepage": "https://github.com/Arjay123/design-practice#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-mkdir": "~0.1.2",
+    "grunt-contrib-copy": "~0.8.0"
+  },
+  "dependencies": {
+    "grunt-responsive-images": "^1.10.1"
+  }
+}
