@@ -41,4 +41,10 @@ var samples = [
         'screenshot': '009-music_player.png',
         'link': '/dailyui/009-music_player/'
     },
+    {
+        'id': '11',
+        'name': 'Flash Message',
+        'screenshot': '011-flash_message.png',
+        'link': '/dailyui/011-flash_message/'
+    }
 ];
