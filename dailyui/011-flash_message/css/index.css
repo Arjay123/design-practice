@@ -1,25 +1,22 @@
 body {
     background: grey;
-    /* width: 100%; */
 }
 
 .messages-wrap {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* width: 100%; */
-}
-
-.flash-wrap {
-    width: 100%;
-    margin: 5% 0;
 }
 
 .flash {
     width: 90%;
-    height: 100%;
+    margin: 5% auto;
+}
+
+.flash-wrap {
+    width: 90%;
     margin: auto;
-    padding: 5px;
+    padding: 5%;
 }
 
 .success {
@@ -45,4 +42,16 @@ body {
     width: 80%;
     margin: auto;
     text-align: center;
+}
+
+@media (min-width: 426px) {
+    .flash {
+        width: 60%;
+    }
+}
+
+@media (min-width: 769px) {
+    .flash {
+        width: 40%;
+    }
 }
